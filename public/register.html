@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - EventHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="flex" style="justify-content: center; align-items: center; min-height: 100vh;">
+    <div class="card" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-1">Create Account</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <div id="registerError" class="text-center mb-1" style="color: var(--danger); display: none;"></div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Sign Up</button>
+        </form>
+        <p class="text-center mt-1">
+            Already have an account? <a href="login.html" style="color: var(--primary);">Login</a>
+        </p>
+        <p class="text-center mt-1">
+            <a href="index.html" style="font-size: 0.9rem;">&larr; Back to Home</a>
+        </p>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

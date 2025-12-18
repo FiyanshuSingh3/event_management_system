@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Discover Amazing Events</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">EventHub</a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <!-- Auth links will be injected here by JS -->
+                <div id="authLinks" class="flex" style="gap:1rem;">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div id="userLinks" class="hidden flex" style="gap:1rem; align-items: center;">
+                    <a href="dashboard.html">Dashboard</a>
+                    <button id="logoutBtn" class="btn btn-outline" style="padding: 0.5rem 1rem;">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; padding: 6rem 0; color: white; text-align: center;">
+        <div class="container">
+            <h1 style="margin-bottom: 1rem;">Discover & Create Unforgettable Events</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join the community of event enthusiasts. Find your next adventure or host your own.
+            </p>
+            <div class="search-box" style="background: white; padding: 1rem; border-radius: 0.5rem; max-width: 800px; margin: 0 auto; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search events..." style="flex: 2;">
+                <input type="text" id="locationInput" class="form-control" placeholder="Location" style="flex: 1;">
+                <button id="searchBtn" class="btn btn-primary" style="flex: 0 0 auto;">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Events Section -->
+    <section class="container mt-2">
+        <h2 class="mb-1">Upcoming Events</h2>
+        <div id="eventsGrid" class="grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;">
+            <!-- Event Cards will be injected here -->
+            <div class="text-center" style="grid-column: 1/-1; padding: 2rem;">
+                <i class="fas fa-spinner fa-spin fa-2x"></i> Loading events...
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-2" style="background: var(--dark); color: white; padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <p>&copy; 2024 EventHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EventHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">EventHub</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="create-event.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">+ Create Event</a>
+                <button id="logoutBtn" class="btn btn-outline" style="padding: 0.5rem 1rem;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-2">
+        <h1 class="mb-1">My Dashboard</h1>
+
+        <!-- My Registrations -->
+        <section class="mb-2">
+            <h2>My Registrations</h2>
+            <div id="registrationsList" class="grid mt-1"
+                style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+                <p>Loading registrations...</p>
+            </div>
+        </section>
+
+        <!-- My Events (If I created any) -->
+        <section>
+            <div class="flex" style="justify-content: space-between; align-items: center;">
+                <h2>Events I'm Organizing</h2>
+                <a href="create-event.html" class="btn btn-outline">Create New</a>
+            </div>
+
+            <div id="myEventsList" class="grid mt-1"
+                style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+                <p>Loading events...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
